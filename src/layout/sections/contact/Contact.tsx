@@ -4,6 +4,7 @@ import { FLexWrapper } from "../../../components/FlexWrapper";
 import { SectionTittle } from "../../../components/SectionTittle";
 import { SkillCheckPhoto } from "../skills/skillCheckPhoto/SkillCheckPhoto";
 import { ContactForm } from "./contactForm/ContactForm";
+import { Container } from "../../../components/Container";
 
 type SectionPropsTittleType = {
     tittle: string,
@@ -15,11 +16,13 @@ type SectionPropsTittleType = {
 export const Contact = (props: SectionPropsTittleType) => {
     return(
         <StyledContact>
-            <SectionTittle>{props.tittle}</SectionTittle>
-            <FLexWrapper justify="space-around">
-                <SkillCheckPhoto src={props.src}/>
-                <ContactForm/>
-            </FLexWrapper>
+            <Container>
+                <SectionTittle>{props.tittle}</SectionTittle>
+                <FLexWrapper justify="space-around">
+                    <SkillCheckPhoto src={props.src}/>
+                    <ContactForm/>
+                </FLexWrapper>
+            </Container>
         </StyledContact>
     )
 }
@@ -27,6 +30,6 @@ export const Contact = (props: SectionPropsTittleType) => {
 
 
 const StyledContact = styled.section`
-    min-height: 100vh;
+    min-height: 591px;
     background-color: #f4f4f4;
 `

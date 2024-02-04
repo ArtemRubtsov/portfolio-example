@@ -4,6 +4,7 @@ import { FLexWrapper } from "../../../components/FlexWrapper";
 import { FooterSocail } from "./footerSocial/FooterSocial";
 import { FooterGit } from "./footerGit/FooterGit";
 import { FooterTittle } from "./footerTittle/FooterTittle";
+import { Container } from "../../../components/Container";
 
 
 type FooterPropstype = {
@@ -13,31 +14,33 @@ type FooterPropstype = {
 export const Footer = (props: FooterPropstype) => {
     return(
         <StyledFooter img={props.img}>
-            <FLexWrapper justify="space-around" align="center">
-                <FooterTittle tittle="My social media links:"/>
-                <FooterTittle tittle="More projects I’ve worked on"/>
-            </FLexWrapper>
-            <FLexWrapper justify="space-around">
-                
-                <StyledFooterSocialList>
-                    <FooterSocail iconId={"linkSvg"}/>
-                    <FooterSocail iconId={"mesSvg"}/>
-                    <FooterSocail iconId={"twitSvg"}/>
-                    <FooterSocail iconId={"emailSvg"}/>
-                </StyledFooterSocialList>
-                <StyledFooterProjectslGit>
-                    <FooterSocail iconId={"gitSvg"}/>
-                        <StyledFooterP>
-                            @john-doe on github
-                        </StyledFooterP>
-                </StyledFooterProjectslGit>
-            </FLexWrapper>
+            <Container>
+                <FLexWrapper justify="space-around" align="center">
+                    <FooterTittle tittle="My social media links:"/>
+                    <FooterTittle tittle="More projects I’ve worked on"/>
+                </FLexWrapper>
+                <FLexWrapper justify="space-around">
+                    
+                    <StyledFooterSocialList>
+                        <FooterSocail iconId={"linkSvg"}/>
+                        <FooterSocail iconId={"mesSvg"}/>
+                        <FooterSocail iconId={"twitSvg"}/>
+                        <FooterSocail iconId={"emailSvg"}/>
+                    </StyledFooterSocialList>
+                    <StyledFooterProjectslGit>
+                        <FooterSocail iconId={"gitSvg"}/>
+                            <StyledFooterP>
+                                @john-doe on github
+                            </StyledFooterP>
+                    </StyledFooterProjectslGit>
+                </FLexWrapper>
+            </Container>
         </StyledFooter>
     )
 }
 
 const StyledFooter = styled.footer<{img: string}>`
-    min-height: 255px;
+    min-height: 251px;
     background-image: url(${(props) => props.img});
     background-color: #f4f4f4;
     background-repeat: no-repeat;
@@ -53,5 +56,9 @@ const StyledFooterProjectslGit = styled.div`
     display: flex;
 `
 const StyledFooterP = styled.p`
+    
+`
+
+const StyledFooterLink = styled.a`
     
 `
