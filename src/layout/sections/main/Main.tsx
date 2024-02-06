@@ -11,38 +11,68 @@ type MainPropsType = {
 export const Main = (props: MainPropsType) => {
   return (
     <StyledMain img={props.img}>
-      <Container>
-        <FLexWrapper align={"center"} justify="space-around">
-          <div>
-            <h2>
+      {/* <Container> */}
+        <FLexWrapper align="center" justify="space-around">
+          <MainStyledInfo>
+            <StyledTittleH2>
               Hi<span>1</span>,I'm a
-            </h2>
+            </StyledTittleH2>
             <MainTittle>Software Developer</MainTittle>
-            <p>
+            <StyledMainP>
               I’m <span>John Doe</span>, a developer dedicated to making the
               world a better place one line of code at a time.
-            </p>
-          </div>
-          <Photo src={photo} alt="" />
+            </StyledMainP>
+            <StyledButton>Hire me</StyledButton>
+          </MainStyledInfo>
+          <Photo src={photo} alt="ava" />
         </FLexWrapper>
-      </Container>
+      {/* </Container> */}
     </StyledMain>
   );
 };
 
-const MainTittle = styled.h1``;
+const MainTittle = styled.h1`
+  color: rgb(52, 61, 104);
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+`;
+
+const StyledTittleH2 = styled.h2`
+  color: rgb(52, 61, 104);
+  font-size: 32px;
+  font-weight: 600;
+`;
+
+const StyledButton = styled.button`
+  padding: 8px 16px;
+  background: rgb(232, 73, 73);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(255, 255, 255);
+`;
 
 const StyledMain = styled.section<{img: string}>`
-  min-height: 591px;
+  min-height: 600px;
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
   background-size: cover;
-  /* backdrop-filter: blur(800px); */
-  /* background-color: rgba(79, 71, 200, 0.4); */
 `;
-
 const Photo = styled.img`
   width: 350px;
-  height: 330px;
-  object-fit: cover;
+  min-height: 200px;
+  /* object-fit: cover; */
 `;
+const MainStyledInfo = styled.div`
+  max-width: 550px;
+`
+const StyledMainP = styled.p`
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+  cursor: pointer;
+`
