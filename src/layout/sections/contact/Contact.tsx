@@ -16,13 +16,11 @@ type SectionPropsTittleType = {
 export const Contact = (props: SectionPropsTittleType) => {
     return(
         <StyledContact>
-            <Container>
-                <SectionTittle>{props.tittle}</SectionTittle>
-                <FLexWrapper justify="space-around">
+                <SectionTittle textAlign="center">{props.tittle}</SectionTittle>
+                <FLexWrapper justify="space-between">
                     <SkillCheckPhoto src={props.src}/>
                     <ContactForm/>
                 </FLexWrapper>
-            </Container>
         </StyledContact>
     )
 }

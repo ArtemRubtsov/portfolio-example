@@ -2,6 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 
+type ContainerPropsType = {
+    dierction?: string,
+    justify?: string,
+    align?: string,
+    wrap?: string
+}
+
+
 export const Container = styled.div`
     display: flex;
     justify-content: space-between;

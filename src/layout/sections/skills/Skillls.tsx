@@ -14,9 +14,8 @@ type SkillsPropsType = {
 export const Skills = (props: SkillsPropsType) => {
   return (
     <StyledSkills img={props.img}>
-      <Container>
-        <SectionTittle>Skills</SectionTittle>
-        <FLexWrapper justify="space-around">
+        <SectionTittle textAlign="center">Skills</SectionTittle>
+        <FLexWrapper justify="between" align="center">
           <SkillsWrapper>
             <StyledSkillP>
               I have a vast experience in the following web technologies:
@@ -30,20 +29,28 @@ export const Skills = (props: SkillsPropsType) => {
           </SkillsWrapper>
           <SkillCheckPhoto src={skillPhoto} />
         </FLexWrapper>
-      </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section<{img: string}>`
-  min-height: 591px;
+  min-height: 590px;
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
   background-size: cover;
+
 `;
 
-const StyledSkillP = styled.p``;
-const SkillsWrapper = styled.div``;
+const StyledSkillP = styled.p`
+  color: rgb(129, 128, 128);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 20px;
+`;
+const SkillsWrapper = styled.div`
+  max-width: 505px;
+`;
 
 const SkillFlexWrapper = styled.div`
   display: flex;

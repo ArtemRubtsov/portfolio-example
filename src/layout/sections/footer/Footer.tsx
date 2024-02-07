@@ -14,7 +14,6 @@ type FooterPropstype = {
 export const Footer = (props: FooterPropstype) => {
     return(
         <StyledFooter img={props.img}>
-            <Container>
                 <FLexWrapper justify="space-around" align="center">
                     <FooterTittle tittle="My social media links:"/>
                     <FooterTittle tittle="More projects I’ve worked on"/>
@@ -34,7 +33,6 @@ export const Footer = (props: FooterPropstype) => {
                             </StyledFooterP>
                     </StyledFooterProjectslGit>
                 </FLexWrapper>
-            </Container>
         </StyledFooter>
     )
 }
@@ -56,7 +54,7 @@ const StyledFooterProjectslGit = styled.div`
     display: flex;
 `
 const StyledFooterP = styled.p`
-    
+    color: #f0f0f0;
 `
 
 const StyledFooterLink = styled.a`

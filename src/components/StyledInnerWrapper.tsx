@@ -1,8 +1,8 @@
-import React from "react";
+import styled from "styled-components"
 
-import styled from "styled-components";
 
-type FLexWrapperPropsType = {
+
+type StyledInnerWrapperPropsType = {
     dierction?: string,
     justify?: string,
     align?: string,
@@ -10,11 +10,7 @@ type FLexWrapperPropsType = {
 }
 
 
-
-
-export const FLexWrapper = styled.div<FLexWrapperPropsType>`
-    max-width: 1230px;
-    margin: 0 auto;
+export const StyledInnerWrapper = styled.div<StyledInnerWrapperPropsType>`
     display: flex;
     flex-direction: ${props => props.dierction || "row"};
     justify-content: ${props => props.justify || "flex-start"};

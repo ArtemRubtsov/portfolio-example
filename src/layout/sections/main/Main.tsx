@@ -11,8 +11,8 @@ type MainPropsType = {
 export const Main = (props: MainPropsType) => {
   return (
     <StyledMain img={props.img}>
-      {/* <Container> */}
-        <FLexWrapper align="center" justify="space-around">
+
+        <FLexWrapper align="center" justify="space-between" >
           <MainStyledInfo>
             <StyledTittleH2>
               Hi<span>1</span>,I'm a
@@ -26,7 +26,7 @@ export const Main = (props: MainPropsType) => {
           </MainStyledInfo>
           <Photo src={photo} alt="ava" />
         </FLexWrapper>
-      {/* </Container> */}
+
     </StyledMain>
   );
 };
@@ -59,6 +59,7 @@ const StyledMain = styled.section<{img: string}>`
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
   background-size: cover;
+
 `;
 const Photo = styled.img`
   width: 350px;

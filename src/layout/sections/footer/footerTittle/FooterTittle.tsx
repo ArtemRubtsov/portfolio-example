@@ -13,4 +13,8 @@ export const FooterTittle = (props: FooterPropsTittleType) => {
 
 const StyledFooterTittle = styled.h3`
     min-height: 29px;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
 `

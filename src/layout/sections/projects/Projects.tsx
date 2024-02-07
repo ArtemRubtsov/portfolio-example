@@ -12,8 +12,7 @@ import { Container } from "../../../components/Container";
 export const Projects = () => {
     return (
         <StyledProjects>
-            <Container>
-                <SectionTittle>Projects</SectionTittle>
+                <SectionTittle textAlign="center" color="#f0f0f0">Projects</SectionTittle>
                 <StyledProjectsP>A select number of projects</StyledProjectsP>
                 <FLexWrapper justify="space-around">
                     <ProjectsItem tittle={"Made a social media manager template using HTML 5, CSS and JS."} 
@@ -23,7 +22,6 @@ export const Projects = () => {
                     <ProjectsItem tittle={"Made an I.P address tracking website."} 
                                 src={trackingImg}/>
                 </FLexWrapper>
-            </Container>
         </StyledProjects>
     )
 }
@@ -37,4 +35,9 @@ const StyledProjects = styled.section`
 
 const StyledProjectsP = styled.p`
     text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #f0f0f0;
+    margin-bottom: 25px;
 `
