@@ -6,7 +6,8 @@ type FLexWrapperPropsType = {
     dierction?: string,
     justify?: string,
     align?: string,
-    wrap?: string
+    wrap?: string,
+    minHeight?: string
 }
 
 
@@ -20,4 +21,5 @@ export const FLexWrapper = styled.div<FLexWrapperPropsType>`
     justify-content: ${props => props.justify || "flex-start"};
     align-items: ${props => props.align || "stetch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
+    min-height: ${props => props.minHeight};
 `

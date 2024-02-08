@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import photo from "../../../assets/img/photo.webp";
+import mainPhoto from '../../../assets/img/photo.webp'
 import { FLexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 
 type MainPropsType = {
-  img: string,
+  img?: string,
+  ava?: string
 }
 
 export const Main = (props: MainPropsType) => {
   return (
     <StyledMain img={props.img}>
 
-        <FLexWrapper align="center" justify="space-between" >
+        <FLexWrapper  align="center" justify="space-between" minHeight="600px">
           <MainStyledInfo>
             <StyledTittleH2>
               Hi<span>1</span>,I'm a
@@ -24,7 +25,7 @@ export const Main = (props: MainPropsType) => {
             </StyledMainP>
             <StyledButton>Hire me</StyledButton>
           </MainStyledInfo>
-          <Photo src={photo} alt="ava" />
+          <StyledMainPhoto />
         </FLexWrapper>
 
     </StyledMain>
@@ -54,18 +55,28 @@ const StyledButton = styled.button`
   color: rgb(255, 255, 255);
 `;
 
-const StyledMain = styled.section<{img: string}>`
-  min-height: 600px;
+const StyledMain = styled.section<MainPropsType>`
+  /* max-width: 1230px; */
+  /* margin: 0 auto; */
+  /* min-height: 600px; */
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
   background-size: cover;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+`;
 
-`;
-const Photo = styled.img`
-  width: 350px;
-  min-height: 200px;
-  /* object-fit: cover; */
-`;
+
+const StyledMainPhoto = styled.div<MainPropsType>`
+  min-height: 390px;
+  max-width: 280px;
+  width: 100%;
+  background-image: url(${mainPhoto});
+  background-size: cover;
+  background-repeat: no-repeat;
+`
+
 const MainStyledInfo = styled.div`
   max-width: 550px;
 `
