@@ -4,6 +4,8 @@ import mainPhoto from '../../../assets/img/photo.webp'
 import { FLexWrapper } from "../../../components/FlexWrapper";
 import sprite from '../../../assets/img/sprite-icons.svg';
 import zigzag from '../../../assets/img/zigzags.svg'
+import { PiHandWavingFill } from "react-icons/pi";
+import { IconContext } from "react-icons";
 
 type MainPropsType = {
   img?: string,
@@ -16,9 +18,11 @@ export const Main = (props: MainPropsType) => {
 
         <FLexWrapper  align="center" justify="space-between" minHeight="600px">
           <MainStyledInfo>
-            <StyledTittleH2>
-              Hi<span>1</span>,I'm a
-            </StyledTittleH2>
+            <IconContext.Provider value={{color: "yellow"}}>
+              <StyledTittleH2>
+                Hi<PiHandWavingFill />, I'm a
+              </StyledTittleH2>
+            </IconContext.Provider>
             <MainTittle>Software Developer</MainTittle>
             <StyledMainP>
               I’m <span>John Doe</span>, a developer dedicated to making the
@@ -56,6 +60,7 @@ const StyledButton = styled.button`
   font-weight: 400;
   line-height: 26px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 `;
 
 const StyledMain = styled.section<MainPropsType>`

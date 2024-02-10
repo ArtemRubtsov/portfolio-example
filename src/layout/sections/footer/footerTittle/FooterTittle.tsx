@@ -17,4 +17,5 @@ const StyledFooterTittle = styled.h3`
     font-size: 20px;
     font-weight: 500;
     line-height: 29px;
+    margin-bottom: 30px;
 `

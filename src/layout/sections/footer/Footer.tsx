@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FLexWrapper } from "../../../components/FlexWrapper";
 import { FooterSocail } from "./footerSocial/FooterSocial";
-import { FooterGit } from "./footerGit/FooterGit";
 import { FooterTittle } from "./footerTittle/FooterTittle";
 import { StyledInnerWrapper } from "../../../components/StyledInnerWrapper";
 
@@ -14,7 +12,6 @@ type FooterPropstype = {
 export const Footer = (props: FooterPropstype) => {
     return(
         <StyledFooter img={props.img}>
-
                 <StyledInnerWrapper justify="space-around" align="center" minHeight="250px">
                         <StyledFooterSocialWrapper>
                             <FooterTittle tittle="My social media links:"/>
@@ -25,20 +22,20 @@ export const Footer = (props: FooterPropstype) => {
                                     <FooterSocail iconId={"emailSvg"}/>
                             </StyledFooterSocialList>
                         </StyledFooterSocialWrapper>
-                    <StyledFooterProjectslGitWrapper>
-                        
-                            <FooterTittle tittle="More projects I’ve worked on"/>
+                    <StyledFooterProjectslGitWrapper>                
+                    <FooterTittle tittle="More projects I’ve worked on"/>
+                        <StyledFooterSocialList>
                             <FooterSocail iconId={"gitSvg"}/>
-                                <StyledFooterP>
-                                    @john-doe on github
-                                </StyledFooterP>
+                                <StyledFooterLinkGit>
+                                        @<StyledSocialLinkSpan>john-doe</StyledSocialLinkSpan> on github
+                                </StyledFooterLinkGit>
+                        </StyledFooterSocialList>
                     </StyledFooterProjectslGitWrapper>
                 </StyledInnerWrapper>
 
         </StyledFooter>
     )
 }
-
 
 const StyledFooterSocialWrapper = styled.div`
     display: flex;
@@ -47,6 +44,7 @@ const StyledFooterSocialWrapper = styled.div`
 `
 
 const StyledFooter = styled.footer<{img: string}>`
+    padding-top: 50px;
     min-height: 250px;
     background-image: url(${(props) => props.img});
     background-color: #f4f4f4;
@@ -55,7 +53,7 @@ const StyledFooter = styled.footer<{img: string}>`
 `
 const StyledFooterSocialList = styled.ul`
     display: inline-block;
-    max-width: 209px;
+    max-width: 240px;
     display: flex;
 `
 
@@ -64,11 +62,17 @@ const StyledFooterProjectslGitWrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
-const StyledFooterP = styled.p`
+const StyledFooterLinkGit = styled.a`
     display: inline-block;
     color: #f0f0f0;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
 `
-
-const StyledFooterLink = styled.a`
-    display: inline-block;
+const StyledSocialLinkSpan = styled.span`
+    &:hover{
+        color: rgb(10, 203, 191);
+    }
+    
 `
