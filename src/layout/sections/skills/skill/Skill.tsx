@@ -11,14 +11,18 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId}/>
+            <Icon iconId={props.iconId} width="50px" height="80px" viewBox="0 -15 115 100"/>
             <StyledSkillTittle >{props.title}</StyledSkillTittle>
         </StyledSkill>
     )
 }
 
 const StyledSkill = styled.div`
-    
+
+    &:first-child{
+        margin-left: 0;
+    }
+    margin-left: 60px;
 `
 
 const StyledSkillTittle = styled.h3`

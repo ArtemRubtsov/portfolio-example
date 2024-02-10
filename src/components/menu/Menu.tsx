@@ -8,7 +8,6 @@ type MenuPropsType = {
 }
 
 
-// {menuItems: Array<string>}
  export const Menu = (props: MenuPropsType) =>{
     return(
         <StyledMenu>
@@ -41,7 +40,6 @@ const StyledMenu = styled.nav`
     li:nth-child(2){
         &::before{
             position: absolute;
-            display: inline-block;
             content: "";
             width: 33px;
             height: 30px;
@@ -50,7 +48,6 @@ const StyledMenu = styled.nav`
             background-image: url(${gears});
             background-repeat: no-repeat;
             background-size: cover;
-            /* color: black; */
             
         }
     }
@@ -66,9 +63,7 @@ const StyledMenu = styled.nav`
             background-image: url(${gears});
             background-repeat: no-repeat;
             background-size: cover;
-            color: black;
-            /* background-color: red; */
-            /* cursor: pointer; */
+            
             
         }
     }

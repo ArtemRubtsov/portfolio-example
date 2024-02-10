@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import mainPhoto from '../../../assets/img/photo.webp'
 import { FLexWrapper } from "../../../components/FlexWrapper";
-import { Container } from "../../../components/Container";
+import sprite from '../../../assets/img/sprite-icons.svg';
+import zigzag from '../../../assets/img/zigzags.svg'
 
 type MainPropsType = {
   img?: string,
@@ -25,7 +26,9 @@ export const Main = (props: MainPropsType) => {
             </StyledMainP>
             <StyledButton>Hire me</StyledButton>
           </MainStyledInfo>
-          <StyledMainPhoto />
+          <StyledMainPhoto >
+
+          </StyledMainPhoto>
         </FLexWrapper>
 
     </StyledMain>
@@ -56,15 +59,10 @@ const StyledButton = styled.button`
 `;
 
 const StyledMain = styled.section<MainPropsType>`
-  /* max-width: 1230px; */
-  /* margin: 0 auto; */
-  /* min-height: 600px; */
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;
   background-size: cover;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-around; */
+  position: relative;
 `;
 
 
@@ -75,6 +73,16 @@ const StyledMainPhoto = styled.div<MainPropsType>`
   background-image: url(${mainPhoto});
   background-size: cover;
   background-repeat: no-repeat;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 80px;
+    right: 640px;
+    width: 38px;
+    height: 100px;
+    background-image: url(${zigzag});
+    
+  }
 `
 
 const MainStyledInfo = styled.div`

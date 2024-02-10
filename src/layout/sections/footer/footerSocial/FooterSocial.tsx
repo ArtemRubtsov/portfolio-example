@@ -17,6 +17,6 @@ export const FooterSocail = (props: FooterSocialPropsType) =>{
 
 const StyledFooterSocial = styled.li`
     min-height: 30px;
-
+    list-style: none;
 `
 

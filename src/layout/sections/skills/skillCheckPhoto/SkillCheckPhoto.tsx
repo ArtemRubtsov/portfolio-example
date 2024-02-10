@@ -17,8 +17,9 @@ export const SkillCheckPhoto = (props: SkillsPropstype) => {
 
 
 const StyledSkillCheckPhoto = styled.div`
-    
+     max-width: 510px;
 `
 const StyledSkillPhoto = styled.img`
     width: 100%;
+   
 `

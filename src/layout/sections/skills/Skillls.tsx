@@ -5,7 +5,7 @@ import { SectionTittle } from "../../../components/SectionTittle";
 import { SkillCheckPhoto } from "./skillCheckPhoto/SkillCheckPhoto";
 import { Skill } from "./skill/Skill";
 import skillPhoto from "../../../assets/img/skillPhoto.png";
-import { Container } from "../../../components/Container";
+
 
 type SkillsPropsType = {
   img: string
@@ -15,7 +15,7 @@ export const Skills = (props: SkillsPropsType) => {
   return (
     <StyledSkills img={props.img}>
         <SectionTittle textAlign="center">Skills</SectionTittle>
-        <FLexWrapper justify="between" align="center">
+        <FLexWrapper justify="space-between" align="center">
           <SkillsWrapper>
             <StyledSkillP>
               I have a vast experience in the following web technologies:
@@ -23,12 +23,13 @@ export const Skills = (props: SkillsPropsType) => {
             <SkillFlexWrapper>
               <Skill iconId={"htmlSvg"} title={"HTML5"} />
               <Skill iconId={"cssSvg"} title={"CSS3"} />
-              <Skill iconId={"jsSvg"} title={"JAVASCRIPT"} />
-              <Skill iconId={"bsSvg"} title={"Bootstrap"} />
+              <Skill iconId={"jsSvg"} title={"JavaScript"} />
+              <Skill iconId={"reactSvg"} title={"React"} />
             </SkillFlexWrapper>
           </SkillsWrapper>
           <SkillCheckPhoto src={skillPhoto} />
         </FLexWrapper>
+
     </StyledSkills>
   );
 };
@@ -46,13 +47,17 @@ const StyledSkillP = styled.p`
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+
 `;
 const SkillsWrapper = styled.div`
-  max-width: 505px;
+  max-width: 515px;
 `;
 
 const SkillFlexWrapper = styled.div`
+  min-height: 110px;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
 `;

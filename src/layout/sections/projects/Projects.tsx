@@ -6,7 +6,7 @@ import { ProjectsItem } from "./projectsItem/ProjectsItem";
 import socialImg from '../../../assets/img/proj-1.webp'
 import cardImg from '../../../assets/img/proj-2.webp'
 import trackingImg from '../../../assets/img/proj-3.webp'
-import { Container } from "../../../components/Container";
+import gears from '../../../assets/img/gears.svg'
 
 
 export const Projects = () => {
@@ -29,8 +29,20 @@ export const Projects = () => {
 
 
 const StyledProjects = styled.section`
+    position: relative;
     min-height: 591px;
     background-color: #343D68;
+    &::before{
+        position: absolute;
+        content: "";
+        width: 33px;
+        height: 30px;
+        left: 45%;
+        top: 4%;
+        background-image: url(${gears});
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
 `
 
 const StyledProjectsP = styled.p`

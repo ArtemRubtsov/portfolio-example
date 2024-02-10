@@ -16,7 +16,7 @@ type SectionPropsTittleType = {
 export const Contact = (props: SectionPropsTittleType) => {
     return(
         <StyledContact>
-                <SectionTittle textAlign="center">{props.tittle}</SectionTittle>
+                <SectionTittle textAlign="center" marginBottom="30px">{props.tittle}</SectionTittle>
                 <FLexWrapper justify="space-between">
                     <SkillCheckPhoto src={props.src}/>
                     <ContactForm/>
@@ -29,5 +29,6 @@ export const Contact = (props: SectionPropsTittleType) => {
 
 const StyledContact = styled.section`
     min-height: 591px;
+    padding-top: 50px;
     background-color: #f4f4f4;
 `
