@@ -1,7 +1,8 @@
 import React from "react";  
 import styled from "styled-components";
 import { Button } from "../button/Button";
-
+import { FaPaperPlane } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 
 export const ContactForm = () => {
@@ -9,7 +10,9 @@ export const ContactForm = () => {
         <StyledForm>
             <StyledFieldInput placeholder="Enter email address"/>
             <StyledfieldTextarea as={"textarea"} placeholder="Enter message..."/>
-            <Button type="submit">Send Message</Button>
+            <IconContext.Provider value={{color: "#1c85a2" }}>
+                <Button type="submit">Send Message<FaPaperPlane /></Button>
+            </IconContext.Provider>
         </StyledForm>
     )
 }
@@ -46,5 +49,5 @@ const StyledfieldTextarea = styled.textarea`
     background: rgb(255, 255, 255);
     resize: none;
     margin-bottom: 20px;
-
+    /* color: #1c85a2; */
 `

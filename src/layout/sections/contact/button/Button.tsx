@@ -9,9 +9,12 @@ export const Button = styled.button`
     font-weight: 400;
     line-height: 26px;
     background: rgb(52, 61, 104);
-    padding: 12px 40px 12px 24px;
+    padding: 12px 24px 12px 24px;
     color: rgb(255, 253, 253);
     border-radius: 4px;
     margin: 0 auto;
     cursor: pointer;
+    svg{
+        margin-left: 20px;
+    }
 `

@@ -48,7 +48,7 @@ const StyledMenu = styled.nav`
             background-image: url(${gears});
             background-repeat: no-repeat;
             background-size: cover;
-            
+            cursor: pointer;
         }
     }
     li:nth-child(2){
