@@ -51,7 +51,7 @@ const StyledMenu = styled.nav`
             cursor: pointer;
         }
     }
-    li:nth-child(2){
+    /* li:nth-child(2){
         &:hover::before{
             position: absolute;
             display: inline-block;
@@ -62,11 +62,9 @@ const StyledMenu = styled.nav`
             right: 317px;
             background-image: url(${gears});
             background-repeat: no-repeat;
-            background-size: cover;
-            
-            
-        }
-    }
+            background-size: cover; 
+        } */
+    /* } */
     a{
         color: rgb(0, 0, 0);
         &:hover{

@@ -8,7 +8,7 @@ import skillPhoto from "../../../assets/img/skillPhoto.png";
 
 
 type SkillsPropsType = {
-  img: string
+  img?: string
 }
 
 export const Skills = (props: SkillsPropsType) => {
@@ -34,7 +34,7 @@ export const Skills = (props: SkillsPropsType) => {
   );
 };
 
-const StyledSkills = styled.section<{img: string}>`
+const StyledSkills = styled.section<SkillsPropsType>`
   min-height: 590px;
   background-image: url(${(props) => props.img});
   background-repeat: no-repeat;

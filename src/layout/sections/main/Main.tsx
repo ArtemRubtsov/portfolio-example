@@ -64,7 +64,7 @@ const StyledButton = styled.button`
 `;
 
 const StyledMain = styled.section<MainPropsType>`
-  background-image: url(${(props) => props.img});
+  /* background-image: url(${(props) => props.img}); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -78,15 +78,15 @@ const StyledMainPhoto = styled.div<MainPropsType>`
   background-image: url(${mainPhoto});
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
   &::before{
     content: '';
     position: absolute;
-    top: 80px;
-    right: 640px;
+    top: -25px;
+    left:-50px;
     width: 38px;
     height: 100px;
     background-image: url(${zigzag});
-    
   }
 `
 
