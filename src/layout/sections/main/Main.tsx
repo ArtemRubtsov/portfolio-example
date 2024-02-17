@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import mainPhoto from '../../../assets/img/photo.webp'
 import { FLexWrapper } from "../../../components/FlexWrapper";
-import sprite from '../../../assets/img/sprite-icons.svg';
-import zigzag from '../../../assets/img/zigzags.svg'
+import cube from '../../../assets/img/mainSvg/cube.svg'
+import zigzag from '../../../assets/img/mainSvg/zigzags.svg'
+import ellipse from '../../../assets/img/mainSvg/ellipse.svg'
+import circles from '../../../assets/img/mainSvg/circles.svg'
+import plus from '../../../assets/img/mainSvg/plus.svg'
 import { PiHandWavingFill } from "react-icons/pi";
 import { IconContext } from "react-icons";
 
@@ -25,13 +28,14 @@ export const Main = (props: MainPropsType) => {
             </IconContext.Provider>
             <MainTittle>Software Developer</MainTittle>
             <StyledMainP>
-              I’m <span>John Doe</span>, a developer dedicated to making the
+              I’m <StyledSpan>John Doe</StyledSpan>, a developer dedicated to making the
               world a better place one line of code at a time.
             </StyledMainP>
             <StyledButton>Hire me</StyledButton>
           </MainStyledInfo>
           <StyledMainPhoto >
-
+              <StyledPseudoCirclesElem></StyledPseudoCirclesElem>
+              <StyledPseudoPlusElem></StyledPseudoPlusElem>
           </StyledMainPhoto>
         </FLexWrapper>
 
@@ -64,7 +68,6 @@ const StyledButton = styled.button`
 `;
 
 const StyledMain = styled.section<MainPropsType>`
-  /* background-image: url(${(props) => props.img}); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -79,6 +82,7 @@ const StyledMainPhoto = styled.div<MainPropsType>`
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-right: 10px;
   &::before{
     content: '';
     position: absolute;
@@ -87,17 +91,73 @@ const StyledMainPhoto = styled.div<MainPropsType>`
     width: 38px;
     height: 100px;
     background-image: url(${zigzag});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  &::after{
+    content: '';
+    right: -20px;
+    top: -50px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(${cube});
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 `
 
 const MainStyledInfo = styled.div`
   max-width: 550px;
 `
 const StyledMainP = styled.p`
+  display: inline-block;
+  max-width: 555px;
+  width: 100%;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
   margin-bottom: 30px;
   cursor: pointer;
+  overflow: hidden;
+`
+const StyledSpan = styled.span`
+  font-weight: 700;
+`
+const StyledPseudoCirclesElem = styled.span`
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url(${ellipse});
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 22px;
+      height: 22px;
+      bottom: -30px;
+      left: -20px;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      background-image: url(${circles});
+      background-repeat: no-repeat;
+      width: 120px;
+      height: 76px;
+      right: -25px;
+      bottom: -55px;
+    }
+`
+const StyledPseudoPlusElem = styled.span`
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url(${plus});
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
+    top: -50px;
+    left: 90px;
+  }
 `

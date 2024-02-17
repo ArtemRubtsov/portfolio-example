@@ -13,7 +13,7 @@ export const FooterSocail = (props: FooterSocialPropsType) =>{
     return (
         <StyledFooterSocial>
             <StyledFooterSocialLink href="#">
-                <Icon iconId={props.iconId} width="50" viewBox="0 0 70 40"/>
+                <Icon iconId={props.iconId} width="50" viewBox="0 0 60 40"/>
             </StyledFooterSocialLink>
         </StyledFooterSocial>
     )
@@ -29,5 +29,10 @@ const StyledFooterSocial = styled.li`
     list-style: none;
 `
 const StyledFooterSocialLink = styled.a<FooterLinkPropstype>`
+    color: #fff;
     cursor: pointer;
+    &:hover{
+        color: rgb(232, 73, 73);
+        transition: all 3s ease-in-out;
+    }
 `

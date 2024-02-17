@@ -11,7 +11,7 @@ type SectionTittlePropsType = {
 
 
 export const SectionTittle = styled.h2<SectionTittlePropsType>`
-margin-bottom: 30px;
+    margin-bottom: 30px;
     text-align: ${props => props.textAlign || "start"};
     color: ${props => props.color || "#E84949"}; 
     margin-bottom: ${props => props.marginBottom};
@@ -19,6 +19,8 @@ margin-bottom: 30px;
     font-weight: 500;
     line-height: 29px;
     padding-top: 25px;
+    
+     
 `;
 
 

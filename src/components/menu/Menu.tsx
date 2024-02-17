@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import gears from '../../assets/img/gears.svg'
+import { IconGears } from "../icon/IconGears";
 
 
 type MenuPropsType = {
@@ -12,9 +12,10 @@ type MenuPropsType = {
     return(
         <StyledMenu>
                 <ul>
+                   
                     {props.menuItems.map((item,index) => {
                         return <li key={index}>
-                                    <a href="#">{item}</a>
+                                    <a href="#">{index === 1 &&  <IconGears iconId="gears" width="24" height="22"/>}{item}</a>
                                 </li>
                     })} 
                 </ul>
@@ -26,48 +27,30 @@ const StyledMenu = styled.nav`
     ul {
         position: relative;
         display: flex;
-        gap: 30px;
-        height: 26px;
+        /* gap: 30px; */
+        align-items: center;
+        line-height: 26px;
         
     }
     li{
+
         margin-right: 50px;
         font-size: 18px;
         font-weight: 400;
         line-height: 26px;
-        
-    }
-    li:nth-child(2){
-        &::before{
-            position: absolute;
-            content: "";
-            width: 33px;
-            height: 30px;
-            top: -3px;
-            right: 317px;
-            background-image: url(${gears});
-            background-repeat: no-repeat;
-            background-size: cover;
-            cursor: pointer;
+        &:nth-child(3) {
+            margin-right: 0;
         }
     }
-    /* li:nth-child(2){
-        &:hover::before{
-            position: absolute;
-            display: inline-block;
-            content: "";
-            width: 33px;
-            height: 30px;
-            top: -3px;
-            right: 317px;
-            background-image: url(${gears});
-            background-repeat: no-repeat;
-            background-size: cover; 
-        } */
-    /* } */
+    
+    li svg{
+        margin-right: 20px;
+    }
+   
     a{
         color: rgb(0, 0, 0);
         &:hover{
+            transition: all 0.3s ease-out;
             color: rgb(232, 73, 73);
         }
     }

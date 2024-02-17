@@ -48,6 +48,7 @@ const StyledSkillP = styled.p`
   font-weight: 400;
   line-height: 26px;
   margin-bottom: 40px;
+  overflow: hidden;
 
 `;
 const SkillsWrapper = styled.div`
