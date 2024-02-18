@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { FooterSocail } from "./footerSocial/FooterSocial";
 import { FooterTittle } from "./footerTittle/FooterTittle";
 import { StyledInnerWrapper } from "../../../components/StyledInnerWrapper";
+import { theme } from "../../../styles/Theme";
+import mobileFooter from '../../../assets/img/bgFooterMobile.png'
 
 
 type FooterPropstype = {
@@ -50,6 +52,25 @@ const StyledFooter = styled.footer<{img: string}>`
     background-color: #f4f4f4;
     background-repeat: no-repeat;
     background-size: cover;
+    @media ${theme.media.mobile} {
+        max-width: 360px;
+        background-image: url(${mobileFooter});
+        background-color: #f4f4f4;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+    ${StyledInnerWrapper} {
+        @media ${theme.media.mobile} {
+            max-width: 360px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-left: 25px;
+            padding-top: 50px;
+        }
+    }
 `
 const StyledFooterSocialList = styled.ul`
     display: inline-block;
@@ -69,10 +90,13 @@ const StyledFooterLinkGit = styled.a`
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
+    
+    
 `
 const StyledSocialLinkSpan = styled.span`
     &:hover{
         color: rgb(10, 203, 191);
+        
     }
     
 `

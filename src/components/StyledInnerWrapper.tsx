@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { theme } from "../styles/Theme"
 
 
 
@@ -20,4 +21,5 @@ export const StyledInnerWrapper = styled.div<StyledInnerWrapperPropsType>`
     align-items: ${props => props.align || "stetch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
     min-height: ${props => props.minHeight || "none"};
+    
 `

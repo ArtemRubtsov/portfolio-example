@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { FLexWrapper } from "../../../../components/FlexWrapper";
-
 import { HiArrowNarrowRight } from "react-icons/hi";
-
 import { IconContext } from "react-icons";
+import { theme } from "../../../../styles/Theme";
 
 
 type ProjectsPropsType = {
@@ -19,7 +18,7 @@ export const ProjectsItem = (props: ProjectsPropsType) =>{
         <StyledProjectsItem>
                 <Image src={props.src} alt="" />
                     <StyledProjectsWrapper>
-                        <FLexWrapper dierction="column" align="center" justify="space-between" minHeight="150px" maxWidth="380px">
+                        <FLexWrapper  align="center" justify="space-between" minHeight="150px" maxWidth="380px" wrap="wrap"  >
                             <Tittle>{props.tittle}</Tittle>
                             <StyledProjectsWrapper>
                                 <IconContext.Provider value={{color: "white", size: "20px"}}>
@@ -33,7 +32,6 @@ export const ProjectsItem = (props: ProjectsPropsType) =>{
 }
 
 const StyledProjectsItem = styled.div`
-
     background: rgb(38, 44, 77);
     max-width: 390px;
     min-height: 470px;
@@ -42,19 +40,28 @@ const StyledProjectsItem = styled.div`
     border-image-slice: 1;
     border-style: solid;
     margin-bottom: 40px;
+    @media ${theme.media.mobile}{
+        max-width: 265px;
+        
+    }
 `
 const StyledProjectsWrapper = styled.div`
+    margin: 0 auto;
     max-width: 400px;
     text-align: center;
     padding: 15px 10px 5px 10px;
-
+    
 `
 
 const Image = styled.img`
     width: 100%;
-    max-width: 380px;
+    max-width: 388px;
     height: 276px;
     object-fit: cover;
+    @media ${theme.media.mobile} {
+        min-height: 165px;
+        max-width: 265px;
+    }
 `
 
 const Tittle = styled.h3`

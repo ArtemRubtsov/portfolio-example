@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "../button/Button";
 import { FaPaperPlane } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { theme } from "../../../../styles/Theme";
 
 
 export const ContactForm = () => {
@@ -18,7 +19,7 @@ export const ContactForm = () => {
 }
 
 const StyledForm = styled.form`
-margin-top: 25px;
+    margin-top: 25px;
     max-width: 500px;
     width: 100%;
     display: flex;
@@ -27,6 +28,11 @@ margin-top: 25px;
     font-size: 14px;
     font-weight: 400;
     line-height: 29px;
+    @media ${theme.media.mobile} {
+        max-width: 275px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
 `
 
 const StyledFieldInput = styled.input`
@@ -38,6 +44,9 @@ const StyledFieldInput = styled.input`
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 2px 1px 0px rgba(0, 0, 0, 0.12),0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     background: rgb(255, 255, 255);
     margin-bottom: 40px;
+    @media ${theme.media.mobile} {
+        margin-bottom: 30px;
+    }
 `
 const StyledfieldTextarea = styled.textarea`
     max-width: 615px;

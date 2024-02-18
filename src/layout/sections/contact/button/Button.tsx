@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../../../styles/Theme";
 
 
 export const Button = styled.button`
@@ -16,5 +17,8 @@ export const Button = styled.button`
     cursor: pointer;
     svg{
         margin-left: 20px;
+    }
+    @media ${theme.media.mobile} {
+        margin-bottom: 30px;
     }
 `

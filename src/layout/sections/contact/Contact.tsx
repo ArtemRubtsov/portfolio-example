@@ -4,6 +4,7 @@ import { FLexWrapper } from "../../../components/FlexWrapper";
 import { SectionTittle } from "../../../components/SectionTittle";
 import { SkillCheckPhoto } from "../skills/skillCheckPhoto/SkillCheckPhoto";
 import { ContactForm } from "./contactForm/ContactForm";
+import { theme } from "../../../styles/Theme";
 
 type SectionPropsTittleType = {
     tittle: string,
@@ -30,4 +31,13 @@ const StyledContact = styled.section`
     min-height: 591px;
     padding-top: 50px;
     background-color: #f4f4f4;
+    ${FLexWrapper} {
+        @media ${theme.media.mobile} {
+            max-width: 360px;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+    
+    
 `

@@ -5,5 +5,9 @@ export const theme = {
         accent: "rgb(232, 73, 73)",
         font: "rgba(255, 255, 255, 0.87)",
         fontMain: "rgb(52, 61, 104)",
+    },
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
     }
 }

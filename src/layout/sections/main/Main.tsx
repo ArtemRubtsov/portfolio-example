@@ -9,17 +9,20 @@ import circles from '../../../assets/img/mainSvg/circles.svg'
 import plus from '../../../assets/img/mainSvg/plus.svg'
 import { PiHandWavingFill } from "react-icons/pi";
 import { IconContext } from "react-icons";
+import { MobileMenu } from "../../../components/menu/MobileMenu/MobileMenu";
+import { theme } from "../../../styles/Theme";
 
 type MainPropsType = {
   img?: string,
   ava?: string
 }
 
+
+
 export const Main = (props: MainPropsType) => {
   return (
     <StyledMain img={props.img}>
-
-        <FLexWrapper  align="center" justify="space-between" minHeight="600px">
+        <FLexWrapper  align="center" justify="space-between" minHeight="600px" >
           <MainStyledInfo>
             <IconContext.Provider value={{color: "yellow"}}>
               <StyledTittleH2>
@@ -59,7 +62,7 @@ const StyledTittleH2 = styled.h2`
 const StyledButton = styled.button`
   padding: 8px 16px;
   background: rgb(232, 73, 73);
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
@@ -71,12 +74,20 @@ const StyledMain = styled.section<MainPropsType>`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  ${FLexWrapper}{
+    @media ${theme.media.mobile} {
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 `;
 
 
 const StyledMainPhoto = styled.div<MainPropsType>`
   min-height: 390px;
-  max-width: 280px;
+  max-width: 290px;
   width: 100%;
   background-image: url(${mainPhoto});
   background-size: cover;
@@ -105,11 +116,21 @@ const StyledMainPhoto = styled.div<MainPropsType>`
     background-repeat: no-repeat;
     background-size: cover;
   }
+  @media ${theme.media.mobile} {
+    margin-top: 70px;
+    max-width: 180px;
+    min-height: 290px;
+  }
 
 `
 
 const MainStyledInfo = styled.div`
   max-width: 550px;
+  @media ${theme.media.mobile}{
+    margin-top: 70px;
+    max-width: 290px;
+    min-height: 135px;
+  }
 `
 const StyledMainP = styled.p`
   display: inline-block;
@@ -122,6 +143,9 @@ const StyledMainP = styled.p`
   margin-bottom: 30px;
   cursor: pointer;
   overflow: hidden;
+  @media ${theme.media.mobile} {
+    max-width: 250px;
+  }
 `
 const StyledSpan = styled.span`
   font-weight: 700;

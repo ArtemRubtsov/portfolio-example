@@ -7,6 +7,7 @@ import socialImg from '../../../assets/img/proj-1.webp'
 import cardImg from '../../../assets/img/proj-2.webp'
 import trackingImg from '../../../assets/img/proj-3.webp'
 import { IconGears } from "../../../components/icon/IconGears";
+import { theme } from "../../../styles/Theme";
 
 
 export const Projects = () => {
@@ -34,6 +35,13 @@ const StyledProjects = styled.section`
     background-color: #343D68;
     svg{
         margin-right: 20px;
+    }
+    ${FLexWrapper} {
+        @media ${theme.media.mobile} {
+            flex-direction: column;
+            align-items: center;
+            /* max-width: 360px; */
+        }
     }
     
 `

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../../../styles/Theme";
 
 type FooterPropsTittleType = {
     tittle: string
@@ -18,4 +19,7 @@ const StyledFooterTittle = styled.h3`
     font-weight: 500;
     line-height: 29px;
     margin-bottom: 30px;
+    @media ${theme.media.mobile} {
+        font-weight: 400;
+    }
 `

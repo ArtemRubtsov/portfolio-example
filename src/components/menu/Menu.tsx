@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { IconGears } from "../icon/IconGears";
+import {theme} from '../../styles/Theme'
 
 
 type MenuPropsType = {
@@ -8,11 +9,11 @@ type MenuPropsType = {
 }
 
 
+
  export const Menu = (props: MenuPropsType) =>{
     return(
         <StyledMenu>
                 <ul>
-                   
                     {props.menuItems.map((item,index) => {
                         return <li key={index}>
                                     <a href="#">{index === 1 &&  <IconGears iconId="gears" width="24" height="22"/>}{item}</a>
@@ -27,7 +28,6 @@ const StyledMenu = styled.nav`
     ul {
         position: relative;
         display: flex;
-        /* gap: 30px; */
         align-items: center;
         line-height: 26px;
         
@@ -42,7 +42,6 @@ const StyledMenu = styled.nav`
             margin-right: 0;
         }
     }
-    
     li svg{
         margin-right: 20px;
     }
@@ -54,5 +53,10 @@ const StyledMenu = styled.nav`
             color: rgb(232, 73, 73);
         }
     }
+    @media ${theme.media.tablet} {
+        display: none;
+    }
     
 `
+
+

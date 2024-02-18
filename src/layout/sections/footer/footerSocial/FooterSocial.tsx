@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { theme } from "../../../../styles/Theme";
 
 type FooterSocialPropsType = {
     iconId: string,
@@ -31,8 +32,10 @@ const StyledFooterSocial = styled.li`
 const StyledFooterSocialLink = styled.a<FooterLinkPropstype>`
     color: #fff;
     cursor: pointer;
-    &:hover{
-        color: rgb(232, 73, 73);
-        transition: all 3s ease-in-out;
+    
+    & > svg{
+        margin-bottom: 30px;
+        transition: all 500ms ease-in;
     }
+    
 `
