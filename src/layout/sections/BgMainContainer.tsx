@@ -1,12 +1,9 @@
 import react from 'react'
 import styled from 'styled-components'
-import Bg from '../../assets/img/mainBg.jpg'
 import { Main } from './main/Main'
 import { Skills } from './skills/Skillls'
 
-// type BgMainPropsType = {
-//     backGround: string
-// }
+
 
 
 export const BgMainContainer = () => {
@@ -19,7 +16,5 @@ export const BgMainContainer = () => {
 }
 
 const StyledBgmain = styled.div`
-    background-image: url(${Bg});
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to left, rgba(29, 213, 208, 0.22), rgba(79, 74, 200, 0.20));
 `

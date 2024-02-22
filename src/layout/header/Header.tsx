@@ -11,7 +11,7 @@ const items = ["Skills", "Projects", "Contact me"];
 export const Header = () => {
   return (
     <StyledHeader>
-      <FLexWrapper justify="space-between">
+      <FLexWrapper justify="space-between" align="center">
         <Logo />
         <Menu menuItems={items} />
         <MobileMenu menuItems={items}/>

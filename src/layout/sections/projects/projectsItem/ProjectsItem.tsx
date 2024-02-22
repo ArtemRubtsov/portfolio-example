@@ -16,7 +16,7 @@ type ProjectsPropsType = {
 export const ProjectsItem = (props: ProjectsPropsType) =>{
     return(
         <StyledProjectsItem>
-                <Image src={props.src} alt="" />
+                <Image src={props.src} alt="Project" />
                     <StyledProjectsWrapper>
                         <FLexWrapper  align="center" justify="space-between" minHeight="150px" maxWidth="380px" wrap="wrap"  >
                             <Tittle>{props.tittle}</Tittle>

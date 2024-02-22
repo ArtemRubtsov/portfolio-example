@@ -52,15 +52,6 @@ const StyledFooter = styled.footer<{img: string}>`
     background-color: #f4f4f4;
     background-repeat: no-repeat;
     background-size: cover;
-    @media ${theme.media.mobile} {
-        max-width: 360px;
-        background-image: url(${mobileFooter});
-        background-color: #f4f4f4;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-bottom: 10px;
-        padding-left: 20px;
-    }
     ${StyledInnerWrapper} {
         @media ${theme.media.mobile} {
             max-width: 360px;
